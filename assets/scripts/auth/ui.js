@@ -11,19 +11,35 @@ const signUpFailure = (error) => {
   console.error(error)
 }
 
-const signInSuccess = (data) => {
-  console.log('signInSuccess ran!  Data is :', data)
+const signInSuccess = (response) => {
+  console.log('signInSuccess ran!  Data is :', response)
   // Store user object
-  store.user = data.user
+  store.user = response.user
 }
 
 const signInFailure = (error) => {
   console.log('Sign-in failure!  Error is :', error)
 }
 
+const signOutSuccess = () => {
+  console.log('signOutSuccess ran!  Nothing was returned')
+
+  // OREO COOKIE!
+  console.log('store is: ', store)
+  // Clear user
+  store.user = null
+  console.log('store is: ', store)
+}
+
+const signOutFailure = (error) => {
+  console.log('Sign-out failure!  Error is :', error)
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
-  signInFailure
+  signInFailure,
+  signOutSuccess,
+  signOutFailure
 }
