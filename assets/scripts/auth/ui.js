@@ -35,11 +35,27 @@ const signOutFailure = (error) => {
   console.log('Sign-out failure!  Error is :', error)
 }
 
+const changePasswordSuccess = (data) => {
+  console.log('changePasswordSuccess ran!  Nothing was returned')
+
+  // OREO COOKIE!
+  console.log('store is: ', store)
+  // Clear user
+  store.user = null
+  console.log('store is: ', store)
+}
+
+const changePasswordFailure = (error) => {
+  console.log('Change-Password failure!  Error is :', error)
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
   signInFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  changePasswordSuccess,
+  changePasswordFailure
 }

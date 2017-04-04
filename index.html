@@ -16,11 +16,11 @@
       <h1>API Token Auth</h1>
       <form id="sign-up">
         <fieldset>
-          <legend>Sign up!</legend>
+          <legend>Sign uu!</legend>
           <input type="text" name="credentials[email]" id="sign-up-email" placeholder="Gimme yo email">
           <input type="password" name="credentials[password]" id="sign-up-password" placeholder="Password">
           <input type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" placeholder="Confirm Password">
-          <input type="submit" name="submit" value="Sign up!">
+          <input type="submit" name="submit" value="Sign Up!">
         </fieldset>
       </form><br>
 
@@ -29,16 +29,25 @@
           <legend>Sign In!</legend>
           <input type="text" name="credentials[email]" id="sign-in-email" placeholder="Gimme yo email">
           <input type="password" name="credentials[password]" id="sign-in-password" placeholder="Password">
-          <input type="submit" name="submit" value="Sign in!">
+          <input type="submit" name="submit" value="Sign In!">
+        </fieldset>
+      </form><br>
+
+      <form id="change-password">
+        <fieldset>
+          <legend>Change Password</legend>
+          <input type="password" name="passwords[old]" id="change-password-old" placeholder="Old Password">
+          <input type="password" name="passwords[new]" id="change-password-new" placeholder="New Password">
+          <input type="submit" name="submit" value="Change Password">
         </fieldset>
       </form><br>
 
       <form id="sign-out">
         <fieldset>
           <legend>Sign Out!</legend>
-          <input type="submit" name="submit" value="Sign out!">
+          <input type="submit" name="submit" value="Sign Out!">
         </fieldset>
-      </form>
+      </form><br>
 
       <p>Accessing an authenticated API.</p>
     </body>
