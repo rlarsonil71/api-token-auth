@@ -36,13 +36,7 @@ const signOutFailure = (error) => {
 }
 
 const changePasswordSuccess = (data) => {
-  console.log('changePasswordSuccess ran!  Nothing was returned')
-
-  // OREO COOKIE!
-  console.log('store is: ', store)
-  // Clear user
-  store.user = null
-  console.log('store is: ', store)
+  console.log('Password successfully changed')
 }
 
 const changePasswordFailure = (error) => {
